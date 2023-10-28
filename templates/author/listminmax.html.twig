@@ -1,0 +1,23 @@
+<h1>List Books Between Min and Max</h1>
+
+
+<table border="3" class="center">
+    <tr>
+        <td>Id</td>
+        <td> Username</td>
+        <td>Email</td>
+        <td>Number BooKS</td>
+    </tr>
+    {% for a in authors %}
+    <tr>
+   
+    <td>{{a.id}}</td>
+    <td>{{a.username}}</td>
+    <td>{{a.email}}</td>
+    <td>{{a.nbbooks}}</td>
+     </tr>
+    
+   {% endfor %}
+
+ 
+    </table>

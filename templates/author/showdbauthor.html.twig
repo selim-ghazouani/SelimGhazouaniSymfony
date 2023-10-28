@@ -1,0 +1,22 @@
+<table border="3">
+    <tr>
+        <td>Id</td>
+        <td>Username</td>
+        <td>Email</td>
+        <td>Actions</td>
+       
+    </tr>
+    {% for a in author %}
+    <tr>
+    <td>{{a.id}}</td>
+    <td>{{a.username}}</td>
+    <td>{{a.email}}</td>
+    <td><a href="{{path('editauthor',{'id':a.id})}}">Edit</a>
+    <a href="{{path('deleteauthor',{'id':a.id})}}">Delete</a></td>
+    
+    
+    </tr>
+    {% endfor %}
+    </table>
+    <td><a href="{{ path('minmax') }}"><p style="text-align:center">Search Min and Max</p></a></td>
+    <td><a href="{{ path('DD') }}"><p style="text-align:center">Delete Authors with 0 books</p></a></td>
